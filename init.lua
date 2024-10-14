@@ -324,7 +324,7 @@ require('lazy').setup({
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
-
+      -- { 'nvim-telescope/telescope-live-grep-args.nvim', version = '^1.0.0' },
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
@@ -366,6 +366,8 @@ require('lazy').setup({
           },
         },
       }
+      -- added to load live grep extension
+      -- telescope.load_extension 'live_grep_args'
 
       -- Enable Telescope extensions if they are installed
       pcall(require('telescope').load_extension, 'fzf')
@@ -906,7 +908,7 @@ require('lazy').setup({
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'custom.plugins.alpha',
   -- require 'custom.plugins.dashboard'
-  require 'custom.plugins.dracula',
+  -- require 'custom.plugins.dracula',
   require 'custom.plugins.noice',
   --
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
